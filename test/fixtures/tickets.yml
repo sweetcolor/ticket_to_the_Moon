@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  surname: MyString
+  middle_name: MyString
+  date: 2015-08-09
+  created_at: 2015-08-09 17:33:15
+  place_number: 1
+
+two:
+  name: MyString
+  surname: MyString
+  middle_name: MyString
+  date: 2015-08-09
+  created_at: 2015-08-09 17:33:15
+  place_number: 1

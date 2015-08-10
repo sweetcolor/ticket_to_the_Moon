@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  departure: 2015-08-09 16:31:23
+  arrival: 2015-08-09 16:31:23
+  price: 9.99
+  distance: 1
+
+two:
+  departure: 2015-08-09 16:31:23
+  arrival: 2015-08-09 16:31:23
+  price: 9.99
+  distance: 1
