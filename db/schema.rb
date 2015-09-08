@@ -15,18 +15,11 @@ ActiveRecord::Schema.define(version: 20150809143315) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "hstore"
 
   create_table "cities", force: :cascade do |t|
+    t.hstore "name", null: false
   end
-
-  create_table "city_translations", force: :cascade do |t|
-    t.integer "city_id",            null: false
-    t.string  "locale",             null: false
-    t.string  "name",    limit: 30, null: false
-  end
-
-  add_index "city_translations", ["city_id"], name: "index_city_translations_on_city_id", using: :btree
-  add_index "city_translations", ["locale"], name: "index_city_translations_on_locale", using: :btree
 
   create_table "coach_types", force: :cascade do |t|
     t.string "name", limit: 20, null: false
@@ -39,16 +32,8 @@ ActiveRecord::Schema.define(version: 20150809143315) do
     t.integer "coach_type_id",             null: false
   end
 
-  create_table "station_translations", force: :cascade do |t|
-    t.integer "station_id",            null: false
-    t.string  "locale",                null: false
-    t.string  "name",       limit: 30, null: false
-  end
-
-  add_index "station_translations", ["locale"], name: "index_station_translations_on_locale", using: :btree
-  add_index "station_translations", ["station_id"], name: "index_station_translations_on_station_id", using: :btree
-
   create_table "stations", force: :cascade do |t|
+    t.hstore  "name",    null: false
     t.integer "city_id", null: false
   end
 

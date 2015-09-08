@@ -1,15 +1,11 @@
 class CreateCities < ActiveRecord::Migration
   def up
-    create_table :cities
-    City.create_translation_table! name: {
-                                       type: :string,
-                                       null: false,
-                                       limit: 30
-                                   }
+    create_table :cities do |t|
+      t.hstore :name, null: false
+    end
   end
 
   def down
     drop_table :cities
-    City.drop_translation_table!
   end
 end
