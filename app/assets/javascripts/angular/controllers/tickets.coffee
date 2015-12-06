@@ -1,0 +1,1 @@
+angular.module("Ticket").controller "TicketsCtrl", ($scope, $rootScope, $stateParams, $state) ->

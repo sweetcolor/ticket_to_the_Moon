@@ -1,14 +1,22 @@
 Rails.application.routes.draw do
-  get 'tickets/new'
+  # get 'tickets/new'
 
-  get 'tickets/create'
+  # get 'tickets/create'
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'tickets#new'
+  # root 'tickets#new'
+  angular_handler = 'application#index'
+  angular_routes = %w[
+    tickets
+  ]
+
+  angular_routes.each do |route|
+    get route, to: angular_handler
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

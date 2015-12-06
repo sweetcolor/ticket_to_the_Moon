@@ -1,0 +1,17 @@
+{
+  "name": "ticket_to_the_Moon",
+  "homepage": "https://github.com/sweetcolor/ticket_to_the_Moon",
+  "description": "",
+  "main": "",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
