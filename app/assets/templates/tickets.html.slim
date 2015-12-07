@@ -1,2 +1,16 @@
-div
-  | test angular
+.route-search
+  form role='form'
+    .form-group
+      | Звідки
+      input.form-control type='text' ng-model='route.from'
+    .form-group
+      | Куди
+      input.form-control type='text' ng-model='route.to'
+    .form-group
+      input.form-control type='date' ng-model='route.date'
+      | Дата відправлення
+    .form-group
+      input.form-control type='time' ng-model='route.time'
+      | Час відправлення
+    button.btn.btn-default ng-click='find_route(route)'
+      | Знайти

@@ -15,6 +15,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 
 # gem 'globalize', '~> 5.0.0'
+gem 'responders', '~> 2.0'
 gem 'slim'
 gem 'rails_admin'
 # gem 'rails_admin_globalize_field'

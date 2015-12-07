@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  # get 'city/show'
+  resources :cities
+
+  # get :cities => 'city#index'
+
   # get 'tickets/new'
 
   # get 'tickets/create'
