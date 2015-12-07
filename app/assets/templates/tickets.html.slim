@@ -14,3 +14,14 @@
       | Час відправлення
     button.btn.btn-default ng-click='find_route(route, cities)'
       | Знайти
+    div
+      | {{ search_from }}
+
+    h1
+      | {{ route.from }}
+    h1
+      | {{ route.to }}
+    h1
+      | {{ route.date | date }}
+    h1
+      | {{ route.time | date:'hh:mm' }}
