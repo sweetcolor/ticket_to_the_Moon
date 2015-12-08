@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   # get 'city/show'
-  resources :cities
+  resources :train_stations, only: [:index]
 
   # get :cities => 'city#index'
 
