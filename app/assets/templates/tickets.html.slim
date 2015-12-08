@@ -14,7 +14,25 @@
         .form-group
           input.form-control type='time' ng-model='route.time'
           | Час відправлення
-        button.btn.btn-default ng-click='find_route(route.from, cities, "from")'
+        button.btn.btn-default ng-click='find_route(route, cities)'
           | Знайти
-        .row ng-repeat='from in search_route.from'
-          | {{ from }}
+        .row
+          .col-lg-4 ng-repeat='from in search_route.from_'
+            h2
+              | {{ from.s_name.uk }}
+            p.text-danger
+              | Час відправлення: {{ from.departure | date:'hh:mm' }}
+            p.text-danger
+              | Ціна: {{ from.price | currency }}
+            p.text-danger
+              | Відстань: {{ from.distance }}
+        .row
+          .col-lg-4 ng-repeat='from in search_route.to_'
+            h2
+              | {{ from.s_name.uk }}
+            p.text-danger
+              | Час відправлення: {{ from.departure | date:'hh:mm' }}
+            p.text-danger
+              | Ціна: {{ from.price | currency }}
+            p.text-danger
+              | Відстань: {{ from.distance }}
